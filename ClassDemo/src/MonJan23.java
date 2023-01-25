@@ -3,7 +3,3 @@ public class MonJan23 {
         System.out.println("Hello World," + " " + "My name is Julien Metrot");
     }
 }
-
-class WedJan25 {
-
-}
