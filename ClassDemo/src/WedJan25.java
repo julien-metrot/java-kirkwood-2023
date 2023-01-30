@@ -57,5 +57,11 @@ public class WedJan25 {
         gallons = scanner.nextDouble();
         liters = gallons * 3.7854;
         System.out.printf("%f gallons is approximately %.2f liters\n", gallons, liters);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your weight: ");
+        double weight = sc.nextDouble();
+        weight = weight / 9.81 * 1.622;
+        System.out.printf("You would way %.1f on the Moon", weight);
     }
 }
