@@ -11,7 +11,7 @@ public class Circle extends Shape {
     }
 
     public Circle(double radius) {
-        super(0);
+        super(1);
         setRadius(radius);
     }
 
@@ -29,9 +29,8 @@ public class Circle extends Shape {
     }
 
     @Override
-    public String getArea() {
+    public double getArea() {
         double area = Math.PI * Math.pow(radius, 2);
-        String areaStr = String.format("%.2f", area);
-        return areaStr;
+        return area;
     }
 }

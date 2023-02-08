@@ -26,5 +26,5 @@ public abstract class Shape {
         }
     }
 
-    public abstract String getArea();
+    public abstract double getArea();
 }

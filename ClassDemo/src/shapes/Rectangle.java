@@ -8,13 +8,8 @@ public class Rectangle extends Shape {
     //constructors
     public Rectangle() {
         super(4);
-    }
-
-    @Override
-    public String getArea() {
-        double area = length * height;
-        String areaStr = String.format("%.2f", area);
-        return areaStr;
+        length = 1;
+        height = 1;
     }
 
     public Rectangle(double length, double height) {
@@ -30,7 +25,7 @@ public class Rectangle extends Shape {
     }
 
     public void setLength(double length) {
-        if(length <= 0) {
+        if (length <= 0) {
             throw new IllegalArgumentException("The length must be greater than 0");
         } else {
             this.length = length;
@@ -42,10 +37,16 @@ public class Rectangle extends Shape {
     }
 
     public void setHeight(double height) {
-        if(height <= 0) {
+        if (height <= 0) {
             throw new IllegalArgumentException("The height must be greater than 0");
         } else {
             this.height = height;
         }
+    }
+
+    @Override
+    public double getArea() {
+        double area = length * height;
+        return area;
     }
 }
