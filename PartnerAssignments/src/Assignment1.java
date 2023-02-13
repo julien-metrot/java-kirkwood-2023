@@ -4,6 +4,8 @@ public class Assignment1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //Part 1
+        // Driver: Julien
+        // Navigator : Wyatt
         System.out.print("Enter a number: ");
         double num1 = scanner.nextDouble();
         System.out.print("Enter another number: ");
@@ -11,6 +13,8 @@ public class Assignment1 {
         System.out.println("Largest: " + Math.max(num1, num2));
 
         //Part 2
+        // Driver: Wyatt
+        // Navigator: Julien
         System.out.print("Enter the radius of a circle: ");
         double radius = scanner.nextDouble();
         if (radius < 0) {
