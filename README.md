@@ -25,4 +25,6 @@ git commit -m "describe my work"
 git push origin main
 ```
 
-### Chapter 1
+### Week 3 and 4
+
+In Chapters 1 and 2 we learned about 
