@@ -1,0 +1,27 @@
+package en.codegym.task.pro.task04.task0403;
+
+import java.util.Scanner;
+
+/* 
+Summation
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int input;
+        while (true) {
+            if (scanner.hasNextInt()) {
+               input = scanner.nextInt();
+               sum += input;
+            } else if (scanner.hasNextLine()) {
+                String inputString = scanner.nextLine();
+                if (inputString.equals("ENTER")) {
+                    System.out.println(sum);
+                    break;  
+                }
+           }
+        }
+    }
+}
