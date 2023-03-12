@@ -8,10 +8,8 @@ public class Main {
         try (Scanner scanner = new Scanner(System.in)) {
             int choice = 0;
             main_program: while(true) {
-                System.out.print("Select an option: ");
                 // To Do: Prompt user for all options
-                choice = scanner.nextInt();
-                scanner.nextLine();
+                choice = UserInput.getInt(scanner, "Choose an option", 1, 7);
                 switch(choice) {
                     case 1:
                         // Get all records
@@ -26,6 +24,8 @@ public class Main {
                         // Add a new record
                         String title = UserInput.getString(scanner, "Enter the title");
                         boolean isHardCover = UserInput.getBoolean(scanner, "Is this a hard cover book?");
+                        int numPages = UserInput.getInt(scanner, "How many pages?", 1);
+                        int temperature = UserInput.getInt(scanner, "What temperature is it today?");
                         break;
                     case 5:
                         // Update a single record
