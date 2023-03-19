@@ -95,3 +95,34 @@ if (num1 > 5 && num2 > 10) {
 }
 ```
 In my opinion, this makes the codes a lot more readable and easier to understand.
+
+### Week 7 and 8
+
+In week 7 and 8 we learned about debugging and java arrays and their methods. Debugging can be a helpful tool to figure out a problem in the code.
+
+#### Debugging in IntelliJ
+
+Using the built-in debugger in IntelliJ can be very useful. I learned how to set breakpoints and step through code to identify and fix errors.
+<br>
+Here's an example:
+```java
+int i = 0;
+while (i < 10) {
+    System.out.println(i);
+    i--;
+    }
+```
+This is a simple infinite while loop. Let's say I don't understand why it's infinite, You can set a breakpoint on print statements and the code will stop on that breakpoint. You can manually step through code to identify and fix the error.
+
+### Arrays
+
+Arrays are a fundamental concept in Java, and I learned how to declare, initialize, and access arrays. We can also use various methods with arrays, such as Arrays.sort(), which sorts the elements in the array in ascending order.
+<br>
+Here's an example:
+```java
+int[] nums = {3, 1, 2, 5, 4};
+Arrays.sort(nums);
+System.out.println(Arrays.toString(nums));
+```
+We first initialize an int array with 5 indexes. We then use the ```Arrays.sort``` method to sort the array in ascending order. Finally, we print out the array. <br>
+We also user ```Arrays.toString``` to print it out. this will print a String representation of the array so, it is readable for the user. If we do not include this method it will print the location in memory. This results in a bunch of random characters and numbers.
