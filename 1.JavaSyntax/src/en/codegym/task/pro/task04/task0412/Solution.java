@@ -18,7 +18,6 @@ public class Solution {
             if (i % multiple == 0) {
                 sum += i;
             }
-           continue;
         }
         System.out.println(sum);
     }
