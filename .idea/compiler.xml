@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="PartnerAssignments" />
+        <module name="JavaFinalProject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="JavaFinalProject" target="1.8" />
       <module name="PartnerAssignments" target="1.8" />
     </bytecodeTargetLevel>
   </component>

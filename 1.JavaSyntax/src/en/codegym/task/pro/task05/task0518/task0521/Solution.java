@@ -1,4 +1,4 @@
-package en.codegym.task.pro.task05.task0521;
+package en.codegym.task.pro.task05.task0518.task0521;
 
 /* 
 Executing a snippet of code
