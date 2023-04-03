@@ -96,11 +96,11 @@ if (num1 > 5 && num2 > 10) {
 ```
 In my opinion, this makes the codes a lot more readable and easier to understand.
 
-### Week 7 and 8
+## Week 7 and 8
 
 In week 7 and 8 we learned about debugging and java arrays and their methods. Debugging can be a helpful tool to figure out a problem in the code.
 
-#### Debugging in IntelliJ
+### Debugging in IntelliJ
 
 Using the built-in debugger in IntelliJ can be very useful. I learned how to set breakpoints and step through code to identify and fix errors.
 <br>
@@ -126,3 +126,32 @@ System.out.println(Arrays.toString(nums));
 ```
 We first initialize an int array with 5 indexes. We then use the ```Arrays.sort``` method to sort the array in ascending order. Finally, we print out the array. <br>
 We also user ```Arrays.toString``` to print it out. this will print a String representation of the array so, it is readable for the user. If we do not include this method it will print the location in memory. This results in a bunch of random characters and numbers.
+
+## Week 9 and 10
+
+### Java Methods
+
+In week 9 and 10 we learned about creating and using methods in Java.
+Methods are reusable blocks of code that can be called from other parts of your program.
+I learned the syntax for creating methods, including the access modifier, return type, method name, parameter list, and method body.
+<br>
+Here's an example:
+```java
+public static int calculateArea(int length, int width) {
+  return length * width;
+}
+```
+This program calculates the area of a rectangle.
+
+### Static and Non-Static Methods
+
+I also learned about the difference between static and non-static methods.
+Static methods belong to the class and can be called without creating an instance of the class, while non-static methods belong to the object and can only be called on an instance of the class.
+<br>
+Here's an example:
+```java
+public static int generateRandomNumber() {
+  return (int) (Math.random() * 100);
+}
+```
+The code above creates a static method to generate a random number. We use the Math class to do so. The Math class is a static method and can be called without creating an instance of it.
