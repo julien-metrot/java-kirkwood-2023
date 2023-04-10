@@ -1,9 +1,12 @@
 import model.Game;
 import model.GameDAO;
+import tasks.Sort;
 import utilities.Helpers;
 import utilities.UserInput;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -16,28 +19,23 @@ public class Main {
             int choice = 0;
             String[] options = {
                     "Get all games",
-                    "Sort games",
+                    "Sort games by date",
                     "Get one game",
                     "Add a game",
                     "Update a game",
                     "Delete a game"
             };
             main_program: while(true) {
+                System.out.println("\n** MAIN MENU **");
                 choice = Helpers.getChoice(scanner, options);
                 switch(choice) {
                     case 1:
                         // Get all records
-                        for (Game game: GameDAO.getGames()) {
-                            System.out.println("Title: " + game.getTitle());
-                            System.out.println("Number of Copies Sold: " + game.getNumCopySold());
-                            System.out.println("Release Date: " + game.getReleaseDate());
-                            System.out.println("Played?: " + game.isPlayed());
-                            System.out.println("Price: " + game.getPrice());
-                            System.out.println();
-                        }
+                        Helpers.printArray(GameDAO.getGames());
                         break;
                     case 2:
-                        // Sort all records
+                        // Sort games by date
+                        Sort.handleTask(scanner);
                         break;
                     case 3:
                         // Get a single record
