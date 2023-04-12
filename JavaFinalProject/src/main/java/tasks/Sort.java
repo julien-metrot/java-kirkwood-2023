@@ -44,15 +44,19 @@ public class Sort {
                     break;
                 case 5:
                     // Sort number of copies sold 0-9
+                    Collections.sort(games, (a, b) -> Integer.compare(a.getNumCopySold(), b.getNumCopySold()));
                     break;
                 case 6:
                     // Sort number of copies sold 9-0
+                    Collections.sort(games, (a, b) -> Integer.compare(a.getNumCopySold(), b.getNumCopySold()) * -1);
                     break;
                 case 7:
                     // Sort price 0-9
+                    Collections.sort(games, (a, b) -> Double.compare(a.getPrice(), b.getPrice()));
                     break;
                 case 8:
                     // Sort price 9-0
+                    Collections.sort(games, (a, b) -> Double.compare(a.getPrice(), b.getPrice()) * -1);
                     break;
                 default:
                     // exit

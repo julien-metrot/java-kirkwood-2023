@@ -19,7 +19,7 @@ public class Main {
             int choice = 0;
             String[] options = {
                     "Get all games",
-                    "Sort games by date",
+                    "Sort games",
                     "Get one game",
                     "Add a game",
                     "Update a game",
@@ -34,7 +34,7 @@ public class Main {
                         Helpers.printArray(GameDAO.getGames());
                         break;
                     case 2:
-                        // Sort games by date
+                        // Sort games
                         Sort.handleTask(scanner);
                         break;
                     case 3:
