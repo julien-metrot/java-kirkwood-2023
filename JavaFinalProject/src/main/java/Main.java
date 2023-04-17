@@ -7,6 +7,7 @@ import utilities.UserInput;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -35,7 +36,8 @@ public class Main {
                         break;
                     case 2:
                         // Sort games
-                        Sort.handleTask(scanner);
+                        Sort sort = new Sort();
+                        sort.handleTask(scanner);
                         break;
                     case 3:
                         // Get a single record

@@ -26,6 +26,19 @@ public class UserInput {
         return value.equalsIgnoreCase("Yes") || value.equalsIgnoreCase("Y");
     }
     // Get any number
+//    public static double getDouble(Scanner scanner, String prompt) {
+//        double value = 0.0;
+//        while(true) {
+//            System.out.print(prompt);
+//            try {
+//                value = scanner.nextDouble();
+//                scanner.nextLine(); // read enter key press
+//            } catch(InputMismatchException e) {
+//                scanner.nextLine(); // read enter key press
+//                System.out.println("Invalid number");
+//            }
+//        }
+//    }
     public static int getInt(Scanner scanner, String prompt) {
         return getInt(scanner, prompt, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
