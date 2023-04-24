@@ -1,5 +1,6 @@
 import model.Game;
 import model.GameDAO;
+import tasks.Add;
 import tasks.Sort;
 import utilities.Helpers;
 import utilities.UserInput;
@@ -36,28 +37,14 @@ public class Main {
                         break;
                     case 2:
                         // Sort games
-                        Sort sort = new Sort();
-                        sort.handleTask(scanner);
+                        new Sort().handleTask(scanner);
                         break;
                     case 3:
                         // Get a single record
                         break;
                     case 4:
                         // Add a new record
-//                        Book book1 = new Book("Java for Web Application", 850,
-//                                49.99, true,
-//                                LocalDate.of(2019, 8, 15));
-//                        System.out.println(book1.getTitle());
-//                        System.out.println(book1.getNumPages());
-//                        Book book2 = new Book("Java a Beginner's Guide", 680,
-//                                34.5, true,
-//                                LocalDate.of(2020, 9, 1));
-//                        System.out.println(book2.getTitle());
-//                        System.out.println(book2.getNumPages());
-//                        System.out.println(Book.getBookCount());
-//                        Book book3 = book1;
-//                        book3.setTitle("Python Programming");
-//                        System.out.println(book1.getTitle());
+                        new Add().handleTask(scanner);
                         break;
                     case 5:
                         // Update a single record
