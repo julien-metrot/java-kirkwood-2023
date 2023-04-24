@@ -1,5 +1,7 @@
 package model;
 
+import utilities.Helpers;
+
 import java.time.LocalDate;
 
 public class Game implements Comparable<Game> {
@@ -74,5 +76,18 @@ public class Game implements Comparable<Game> {
     @Override
     public int compareTo(Game o) {
         return this.title.compareTo(o.title);
+    }
+
+    public static String getHeaderRow() {
+        return String.format("%-30s\t%-20s\t%10s\t%20s\t%-6s",
+                "Title", "Release Date", "Price", "Copies Sold", "Played");
+    }
+
+    public String toString() {
+        return String.format("%-30s\t%-20s\t%10s\t%20s\t%-6s",
+                this.title, Helpers.formatDate(this.releaseDate),
+                Helpers.formatCurrency(this.price),
+                Helpers.formatCopySold(this.numCopySold),
+                (this.played ? "Yes" : "No"));
     }
 }

@@ -3,6 +3,9 @@ package utilities;
 import model.Game;
 import model.GameDAO;
 
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,13 +25,25 @@ public class Helpers {
     }
 
     public static void printArray(ArrayList<Game> games) {
+        System.out.println(Game.getHeaderRow());
         for (Game game: games) {
-            System.out.println("Title: " + game.getTitle());
-            System.out.println("Number of Copies Sold: " + game.getNumCopySold());
-            System.out.println("Release Date: " + game.getReleaseDate());
-            System.out.println("Played?: " + game.isPlayed());
-            System.out.println("Price: " + game.getPrice());
-            System.out.println();
+            System.out.println(game);
         }
+    }
+
+    public static String formatDate(LocalDate date) {
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("MMMM d, yyyy");
+        String formattedDate = date.format(format);
+        return formattedDate;
+    }
+
+    public static String formatCurrency(double amount) {
+        DecimalFormat formatter = new DecimalFormat("$#,###.00");
+        return formatter.format(amount);
+    }
+
+    public static String formatCopySold(int amount) {
+        DecimalFormat formatter = new DecimalFormat("#,###");
+        return formatter.format(amount);
     }
 }
