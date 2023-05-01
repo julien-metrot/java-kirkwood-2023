@@ -1,6 +1,7 @@
 import model.Game;
 import model.GameDAO;
 import tasks.Add;
+import tasks.Search;
 import tasks.Sort;
 import utilities.Helpers;
 import utilities.UserInput;
@@ -41,6 +42,7 @@ public class Main {
                         break;
                     case 3:
                         // Get a single record
+                        new Search().handleTask(scanner);
                         break;
                     case 4:
                         // Add a new record
@@ -48,6 +50,7 @@ public class Main {
                         break;
                     case 5:
                         // Update a single record
+
                         break;
                     case 6:
                         // Delete a single record
